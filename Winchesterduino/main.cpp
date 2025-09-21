@@ -1367,7 +1367,22 @@ void CommandScan()
       WORD trySectorSize = wdc->getSectorSizeFromSDH(sdh);
             
       // try whole track with uniform sector size
-      wdc->verifyTrack(sectorsPerTrack, trySectorSize);      
+      BYTE startingSector = (BYTE)-1;
+      for (WORD idx = 0; idx < tableCount; idx++)
+      {
+        const DWORD& sectorData = sectorsTable[idx];
+        if (sectorData == 0xFFFFFFFFUL) // undefined
+        {
+          continue;
+        }
+        
+        const BYTE sector = (BYTE)(sectorData >> 16);
+        if (sector < startingSector)
+        {
+          startingSector = sector;
+        }
+      }
+      wdc->verifyTrack(sectorsPerTrack, trySectorSize, startingSector);
       
       if (wdc->getLastError())
       {

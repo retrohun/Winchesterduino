@@ -872,7 +872,7 @@ void WD42C22::verifyTrack(BYTE sectorsPerTrack, WORD sectorSizeBytes, BYTE start
   
   // prepare task file registers  
   adWrite(0x22, sectorsPerTrack);         // sector count
-  adWrite(0x23, startSector);             // starting sector number (default 1)
+  adWrite(0x23, startSector);             // starting sector number
   adWrite(0x24, (BYTE)currentCyl);        // LSB
   adWrite(0x25, (BYTE)(currentCyl >> 8)); // MSB
   

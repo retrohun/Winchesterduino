@@ -306,7 +306,7 @@ private:
   
 // startup and setup related
   PROGMEM_STR m_uiSplash[]           PROGMEM = "Winchesterduino (c) 2025 J. Bogin\r\nBuild: ";
-  PROGMEM_STR m_uiBuild[]            PROGMEM = "30th Aug 2025";
+  PROGMEM_STR m_uiBuild[]            PROGMEM = "21st Sep 2025";
   PROGMEM_STR m_uiTestingWDC[]       PROGMEM = "Testing WD42C22 and its buffer RAM...";
   PROGMEM_STR m_uiWaitingReady[]     PROGMEM = "Waiting until drive becomes /READY...";
   PROGMEM_STR m_uiSeekingToCyl0[]    PROGMEM = "Determining position of cylinder 0...";
@@ -419,8 +419,8 @@ private:
   PROGMEM_STR m_parkRecalibrating[]  PROGMEM = "Recalibrating, please wait...";
     
 // image file transfer
-  PROGMEM_STR m_imgReadWholeDisk[]   PROGMEM = "Read whole disk (normally Yes)? Y/N: ";
-  PROGMEM_STR m_imgWriteWholeDisk[]  PROGMEM = "\r\nWrite whole disk image (normally Yes)? Y/N: ";
+  PROGMEM_STR m_imgReadWholeDisk[]   PROGMEM = "Read whole disk? (normally Yes) Y/N: ";
+  PROGMEM_STR m_imgWriteWholeDisk[]  PROGMEM = "\r\nWrite whole disk image? (normally Yes) Y/N: ";
   PROGMEM_STR m_imgXmodem1k[]        PROGMEM = "Use XMODEM-1K? Y/N: ";
   PROGMEM_STR m_imgXmodemPrefix[]    PROGMEM = "XMODEM: ";
   PROGMEM_STR m_imgXmodem1kPrefix[]  PROGMEM = "XMODEM-1K: ";

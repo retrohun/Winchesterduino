@@ -1321,7 +1321,7 @@ bool CbWriteDisk(DWORD packetNo, BYTE* data, WORD size)
       {
         cbSuccess = false;
         cbProgmemResponseStr = wdc->getLastErrorMessage();
-        return;
+        return false;
       }      
     }
     
